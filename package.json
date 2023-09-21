@@ -1,0 +1,30 @@
+{
+  "name": "onlycodetest",
+  "version": "1.0.0",
+  "description": "make amazing slider",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Airgrinder/OnlyCodeTest.git"
+  },
+  "author": "Airgrinder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Airgrinder/OnlyCodeTest/issues"
+  },
+  "homepage": "https://github.com/Airgrinder/OnlyCodeTest#readme",
+  "devDependencies": {
+    "gsap": "^3.12.2",
+    "sass": "^1.67.0",
+    "swiper": "^10.2.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
