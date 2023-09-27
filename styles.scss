@@ -1,7 +1,35 @@
+@import "src/style/main.scss";
+
 * {
+  color: #42567A;
   font-family: 'PT Sans', sans-serif;
+  margin: 0;
 }
 
-.main {
-  color: red;
+body {
+  background: #F4F5F9;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.blocked {
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+.blocked:hover {
+  background: none !important;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
 }

@@ -19,12 +19,23 @@
   },
   "homepage": "https://github.com/Airgrinder/OnlyCodeTest#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
     "gsap": "^3.12.2",
-    "sass": "^1.67.0",
-    "swiper": "^10.2.0",
+    "html-entities": "^2.4.0",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "json-loader": "^0.5.7",
+    "node-sass": "^9.0.0",
+    "sass": "^1.68.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "swiper": "^10.3.0"
   }
 }
