@@ -11,14 +11,15 @@ function panel(event: MouseEvent) {
         } else {
             rotateCircle(document.getElementsByClassName(`${+count[1] - 1}`)[0].classList[1]);
         }
-    }
-    if (count === "02/06" && event.target === left) {
-        left.classList.add("blocked");
-    } else if (count === "05/06" && event.target === right) {
-        right.classList.add("blocked");
-    } else {
-        left.classList.remove("blocked");
-        right.classList.remove("blocked");
+
+        if (count === "02/06" && event.target === left || count === "02/06" && event.target.parentElement! === left) {
+            left.classList.add("blocked");
+        } else if (count === "05/06" && event.target === right || count === "05/06" && event.target.parentElement! === right) {
+            right.classList.add("blocked");
+        } else {
+            left.classList.remove("blocked");
+            right.classList.remove("blocked");
+        }
     }
 }
 
