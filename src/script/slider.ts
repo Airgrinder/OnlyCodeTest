@@ -1,9 +1,17 @@
-import { Swiper } from "swiper";
+import {Swiper} from "swiper";
 
 const slider = document.querySelector(".main-slider-wrapper") as HTMLElement;
 
+let slides;
+
+if (window.innerWidth <= 1919) {
+    slides = 1.6
+} else {
+    slides = 3
+}
+
 let swiper = new Swiper(slider, {
-    slidesPerView: 3,
+    slidesPerView: slides,
 });
 
 const arrowLeft = document.getElementsByClassName('main-slider-arrow-left')[0];
