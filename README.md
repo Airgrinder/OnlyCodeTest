@@ -7,17 +7,17 @@
 ---
 ## Installation
 To get started, clone the repository by running the following command in your console:
-```git clone https://github.com/Airgrinder/OnlyCodeTest.git```
+`git clone https://github.com/Airgrinder/OnlyCodeTest.git`
 Once the download is complete, navigate to the project folder and install the required dependencies:
-```npm install```
+`npm install`
 ---
 ## Starting the Webpack Dev Server
 To start the Webpack Dev Server, run the following command in your console:
-```npm run start```
+`npm run start`
 ---
 ## Building for Production
 To build the project for production, execute the following command in your console:
-```npm run build```
+`npm run build`
 After the build process is complete, you will find a 'dist' folder in the project's root directory.
 ---
 ### Note:
