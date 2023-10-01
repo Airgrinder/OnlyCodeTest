@@ -27,6 +27,10 @@ body {
   background: none !important;
 }
 
+.current {
+  opacity: 1 !important;
+}
+
 .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
