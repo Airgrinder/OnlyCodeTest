@@ -13,6 +13,18 @@ const sliderText: SliderText = text;
 const circleItems = document.getElementsByClassName('main-circle-point-index') as HTMLCollectionOf<HTMLElement>;
 const slider = document.getElementsByClassName('main-slider-items-item') as HTMLCollectionOf<HTMLElement>;
 
+function yearsAnimation(elem: HTMLElement, value: number) {
+    console.log(+elem.innerHTML + 1 + "")
+  let yearsCounter = setInterval(()=>{
+      if (+elem.innerHTML === value) clearInterval(yearsCounter)
+      if (+elem.innerHTML < value) {
+        elem.innerHTML = +elem.innerHTML + 1 + ""
+    } else if (+elem.innerHTML > value) {
+          elem.innerHTML = +elem.innerHTML + -1 + ""
+      }
+  }, 25)
+}
+
 export function updateContent(target: string) {
   let i = 0;
   const index: string = document.getElementsByClassName(target)[0].innerHTML;
@@ -36,16 +48,13 @@ export function updateContent(target: string) {
     }, 300);
   }
 
+    yearsAnimation(firstYear, +Object.keys(sliderText[theme])[0])
+    yearsAnimation(lastYear, +Object.keys(sliderText[theme])[5])
+
   description.style.opacity = '0';
-  firstYear.style.opacity = '0';
-  lastYear.style.opacity = '0';
   setTimeout(() => {
     description.innerHTML = Object.keys(sliderText)[+index - 1];
-    firstYear.innerHTML = Object.keys(sliderText[theme])[0];
-    lastYear.innerHTML = Object.keys(sliderText[theme])[5];
     description.style.opacity = '1';
-    firstYear.style.opacity = '1';
-    lastYear.style.opacity = '1';
   }, 150);
 }
 
