@@ -4,7 +4,7 @@ const slider = document.querySelector('.main-slider-wrapper') as HTMLElement;
 
 export const swiper = new Swiper(slider, {
   breakpoints: {
-    1919: {
+    1439: {
       slidesPerView: 3,
     },
     320: {

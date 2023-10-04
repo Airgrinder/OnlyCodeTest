@@ -1,4 +1,10 @@
 $border-color: rgba(66, 86, 122, 0.1);
+$regular: 400;
+$bold: 700;
+$first-year: #3877ee;
+$last-year: #ef5da8;
+$decor-gradient: linear-gradient(rgba(56, 119, 238, 1), rgba(239, 93, 168, 1));
+$arr-background: #ffffff;
 
 .main {
   width: 1438px;
@@ -40,7 +46,7 @@ $border-color: rgba(66, 86, 122, 0.1);
   height: 120px;
   width: 5px;
   z-index: 2;
-  background: linear-gradient(rgba(56, 119, 238, 1), rgba(239, 93, 168, 1));
+  background: $decor-gradient;
 }
 
 .main-container-title-head {
@@ -57,7 +63,7 @@ $border-color: rgba(66, 86, 122, 0.1);
 
 .main-container-sliderPanel-index {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: $regular;
 }
 
 .main-container-sliderPanel-arrows {
@@ -86,7 +92,7 @@ $border-color: rgba(66, 86, 122, 0.1);
 
   .main-container-sliderPanel-arrows-left:hover,
   .main-container-sliderPanel-arrows-right:hover {
-    background: #ffffff;
+    background: $arr-background;
   }
 }
 
@@ -154,7 +160,7 @@ $border-color: rgba(66, 86, 122, 0.1);
     border: 1px rgba(48, 62, 88, 0.5) solid;
     color: #42567a;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: $regular;
   }
 }
 
@@ -176,7 +182,7 @@ $border-color: rgba(66, 86, 122, 0.1);
     border: 1px rgba(48, 62, 88, 0.5) solid;
     color: #42567a;
     font-size: 20px;
-    font-weight: 400;
+    font-weight: $regular;
   }
 }
 
@@ -187,7 +193,7 @@ $border-color: rgba(66, 86, 122, 0.1);
   position: absolute;
   color: #42567a;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: $bold;
   transition: 0.3s;
 }
 
@@ -199,19 +205,19 @@ $border-color: rgba(66, 86, 122, 0.1);
   position: absolute;
   width: 973px;
   font-size: 200px;
-  font-weight: 700;
+  font-weight: $bold;
   line-height: 160px;
   display: flex;
   justify-content: space-between;
   z-index: -1;
 
   .main-circle-years-first {
-    color: #3877ee;
+    color: $first-year;
     transition: 150ms;
   }
 
   .main-circle-years-last {
-    color: #ef5da8;
+    color: $last-year;
     transition: 150ms;
   }
 }
@@ -237,10 +243,10 @@ $border-color: rgba(66, 86, 122, 0.1);
   margin-right: 80px;
 
   .main-slider-items-item-head {
-    color: #3877ee;
+    color: $first-year;
     font-size: 25px;
     font-family: Bebas Neue, serif;
-    font-weight: 400;
+    font-weight: $regular;
     text-transform: uppercase;
     line-height: 30px;
     height: 43px;
@@ -275,7 +281,7 @@ $border-color: rgba(66, 86, 122, 0.1);
 
 .main-slider-arrow-left:hover,
 .main-slider-arrow-right:hover {
-  background: #ffffff;
+  background: $arr-background;
 }
 
 .main-slider-arrow-left {
@@ -419,17 +425,17 @@ $border-color: rgba(66, 86, 122, 0.1);
 
   .main-slider-items-item {
     margin-right: 25px;
-  }
 
-  .main-slider-items-item-head {
-    font-size: 16px;
-    height: 38px;
-  }
+    .main-slider-items-item-head {
+      font-size: 16px;
+      height: 38px;
+    }
 
-  .main-slider-items-item-description {
-    width: 166px;
-    height: 80px;
-    font-size: 14px;
-    line-height: 20px;
+    .main-slider-items-item-description {
+      width: 166px;
+      height: 80px;
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
