@@ -1,29 +1,18 @@
 import * as text from '../text/sliderText.json';
 import { handleClick } from './pagination';
+import { yearsAnimation } from './yearsAnimation';
 import { swiper } from './slider';
 
 interface SliderText {
-    [key: string]: {
-        [key: string]: string;
-    };
+  [key: string]: {
+    [key: string]: string;
+  };
 }
 
 const sliderText: SliderText = text;
 
 const circleItems = document.getElementsByClassName('main-circle-point-index') as HTMLCollectionOf<HTMLElement>;
 const slider = document.getElementsByClassName('main-slider-items-item') as HTMLCollectionOf<HTMLElement>;
-
-function yearsAnimation(elem: HTMLElement, value: number) {
-    console.log(+elem.innerHTML + 1 + "")
-  let yearsCounter = setInterval(()=>{
-      if (+elem.innerHTML === value) clearInterval(yearsCounter)
-      if (+elem.innerHTML < value) {
-        elem.innerHTML = +elem.innerHTML + 1 + ""
-    } else if (+elem.innerHTML > value) {
-          elem.innerHTML = +elem.innerHTML + -1 + ""
-      }
-  }, 25)
-}
 
 export function updateContent(target: string) {
   let i = 0;
@@ -48,8 +37,8 @@ export function updateContent(target: string) {
     }, 300);
   }
 
-    yearsAnimation(firstYear, +Object.keys(sliderText[theme])[0])
-    yearsAnimation(lastYear, +Object.keys(sliderText[theme])[5])
+  yearsAnimation(firstYear, +Object.keys(sliderText[theme])[0])
+  yearsAnimation(lastYear, +Object.keys(sliderText[theme])[5])
 
   description.style.opacity = '0';
   setTimeout(() => {
@@ -67,26 +56,26 @@ export function rotateCircle(angle: string) {
     item.classList.remove('active');
     item.style.transform = `rotate(${angle.split('.')[1]}deg)`;
   }
-    target!.classList.add('active');
-    document.getElementsByClassName('main-container-sliderPanel-index')[0].innerHTML = `0${target.innerHTML}/06`;
+  target!.classList.add('active');
+  document.getElementsByClassName('main-container-sliderPanel-index')[0].innerHTML = `0${target.innerHTML}/06`;
 
-    const left = document.getElementsByClassName('main-container-sliderPanel-arrows-left')[0];
-    const right = document.getElementsByClassName('main-container-sliderPanel-arrows-right')[0];
+  const left = document.getElementsByClassName('main-container-sliderPanel-arrows-left')[0];
+  const right = document.getElementsByClassName('main-container-sliderPanel-arrows-right')[0];
 
-    if (target.classList[2] === '1') {
-      left.classList.add('blocked');
-      right.classList.remove('blocked');
-    } else if (target.classList[2] === '6') {
-      left.classList.remove('blocked');
-      right.classList.add('blocked');
-    } else {
-      right.classList.remove('blocked');
-      left.classList.remove('blocked');
-    }
+  if (target.classList[2] === '1') {
+    left.classList.add('blocked');
+    right.classList.remove('blocked');
+  } else if (target.classList[2] === '6') {
+    left.classList.remove('blocked');
+    right.classList.add('blocked');
+  } else {
+    right.classList.remove('blocked');
+    left.classList.remove('blocked');
+  }
 
-    handleClick(+document.getElementsByClassName(angle)[0].classList[2] - 1);
+  handleClick(+document.getElementsByClassName(angle)[0].classList[2] - 1);
 
-    updateContent(angle);
+  updateContent(angle);
 }
 
 for (const item of circleItems) {
